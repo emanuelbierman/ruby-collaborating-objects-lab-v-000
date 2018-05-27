@@ -19,7 +19,7 @@ class Song
     song = Song.new(name)
     song.artist = file_name[0]
     binding.pry
-    song.artist.add_song(song)
+    song.artist.add_song(song.name)
     song.genre = file_name[2]
     song
   end
