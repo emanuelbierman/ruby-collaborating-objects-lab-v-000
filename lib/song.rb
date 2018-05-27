@@ -10,8 +10,8 @@ class Song
   end
 
   def artist=(artist)
-    artist = Artist.find_or_create_by_name(artist)
-    @artist = artist
+    self.artist = Artist.find_or_create_by_name(artist)
+    self.artist.add_song()
   end
 
   def self.new_by_filename(file_name)
